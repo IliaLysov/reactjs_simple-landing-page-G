@@ -1,0 +1,74 @@
+@import "../../main.scss";
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // justify-content: space-between;
+    padding: $headerHeight $desktopScreenIndentation;
+
+    @include tabletTop {
+        padding: $headerHeight $phoneScreenIndentation;
+    }
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: $titleFontSize;
+    color: $grey;
+    text-transform: uppercase;
+    margin-bottom: 10vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.images {
+    height: 36vw;
+    width: 36vw;
+    overflow: hidden;
+    margin-right: 4vw;
+}
+
+.image {
+    height: 36vw;
+    width: 36vw;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+}
+
+.achievements {
+    display: flex;
+    justify-content: space-between;
+    font-size: $baseFontSize;
+    margin-bottom: 5vh;
+}
+
+.achieve {
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+    border: 5px solid #CCE9B0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+}
+
+.description {
+    text-align: justify;
+    font-size: $preMiddleFontSize;
+}

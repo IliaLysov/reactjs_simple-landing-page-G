@@ -1,0 +1,27 @@
+@import "../../main.scss";
+
+.wrapper {
+    position: relative;
+    padding-top: 60px;
+    background-image: url('../../images/coverImg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.47);
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+
+.description {
+    position: absolute;
+    bottom: 5vh;
+    font-weight: 500;
+    color: white;
+    font-size: $preMiddleFontSize;
+}

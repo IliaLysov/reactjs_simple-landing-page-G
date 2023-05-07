@@ -1,0 +1,26 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@500&family=Inter:wght@400;500&family=Oswald:wght@500&display=swap');
+
+$baseFontSize: 14px;
+$preMiddleFontSize: 20px;
+$middleFontSize: 24px;
+$titleFontSize: 48px;
+
+//indentation
+$desktopScreenIndentation: 80px;
+$phoneScreenIndentation: 40px;
+$headerHeight: 60px;
+
+//z-index
+$header: 100;
+$block: 0;
+
+//breakpoints
+$tabletTop: 1280px;
+$tabletBottom: 720px;
+
+//setups
+@import "./media.scss";
+
+//colors
+$grey: #545252;
