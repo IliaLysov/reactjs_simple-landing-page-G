@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #D9D9D9BA;
     padding: $headerHeight $desktopScreenIndentation;
 
     @include tabletTop {
@@ -22,26 +23,45 @@
     margin-bottom: 10vh;
 }
 
-.container {
+.preview {
+    margin-right: 50px;
+}
+
+.catalog {
     display: flex;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    width: 100%;
-    margin-bottom: 30vh;
+}
+
+.itemsSide {
+    display: flex;
 }
 
 .item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 30px;
+
+    &:last-child {
+        margin: 0;
+    }
 }
 
 .itemImg {
-    margin-bottom: 30px;
+    margin-bottom: 14px;
+    filter: brightness(85%);
 }
 
 .itemName {
-    margin-bottom: 30px;
     font-size: $preMiddleFontSize;
+    font-weight: 500;
+    margin-bottom: 10px;
+
 }
 
 .itemBtn {

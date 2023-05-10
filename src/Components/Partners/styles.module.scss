@@ -1,0 +1,24 @@
+@import "../../main.scss";
+
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $headerHeight $desktopScreenIndentation;
+
+    @include tabletTop {
+        padding: $headerHeight $phoneScreenIndentation;
+    }
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: $titleFontSize;
+    color: $grey;
+    text-transform: uppercase;
+    margin-bottom: 10vh;
+}

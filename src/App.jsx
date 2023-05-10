@@ -1,5 +1,5 @@
 import React from "react"
-import { Header, Cover, Application, About } from "./Components"
+import { Header, Cover, Application, About, Catalog, Offer, Contacts, Partners } from "./Components"
 
 
 function App() {
@@ -9,6 +9,10 @@ function App() {
       <Cover />
       <Application />
       <About />
+      <Catalog />
+      <Offer />
+      <Contacts />
+      <Partners />
     </div>
   );
 }

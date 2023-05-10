@@ -2,6 +2,11 @@ import React from "react"
 import styles from './styles.module.scss'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import aboutImg1 from '../../images/aboutImg1.jpg'
+import aboutImg2 from '../../images/aboutImg2.jpg'
+import aboutImg3 from '../../images/aboutImg3.jpg'
+import aboutImg4 from '../../images/aboutImg4.jpg'
+import aboutImg5 from '../../images/aboutImg5.jpg'
+import aboutImg6 from '../../images/aboutImg6.jpg'
 import '@splidejs/react-splide/css'
 
 function About() {
@@ -15,7 +20,19 @@ function About() {
                             <img src={aboutImg1} alt="about1" className={styles.image}/>
                         </SplideSlide>
                         <SplideSlide>
-                            <img src={aboutImg1} alt="about1" className={styles.image}/>
+                            <img src={aboutImg2} alt="about2" className={styles.image}/>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <img src={aboutImg3} alt="about3" className={styles.image}/>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <img src={aboutImg4} alt="about4" className={styles.image}/>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <img src={aboutImg5} alt="about5" className={styles.image}/>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <img src={aboutImg6} alt="about6" className={styles.image}/>
                         </SplideSlide>
                     </Splide>
                 </div>
