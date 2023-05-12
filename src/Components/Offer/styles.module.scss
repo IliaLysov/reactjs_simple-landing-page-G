@@ -36,6 +36,7 @@
     border-radius: 10px;
     cursor: pointer;
     margin-right: 60px;
+    text-align: center;
 }
 
 .form {
@@ -119,4 +120,20 @@
     display: flex;
     margin-bottom: 10px;
     cursor: pointer;
+}
+
+.loading {
+    font-weight: 600;
+    font-size: $middleFontSize;
+    color: $grey;
+    width: 200px;
+    text-align: center;
+}
+
+.result {
+    font-weight: 600;
+    font-size: $middleFontSize;
+    color: #448c00;
+    width: 200px;
+    text-align: center;
 }

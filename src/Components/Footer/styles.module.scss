@@ -1,0 +1,35 @@
+@import "../../main.scss";
+
+.wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px $desktopScreenIndentation;
+
+    @include tabletTop {
+        padding: 20px $phoneScreenIndentation;
+    }
+}
+
+.description {
+    text-transform: uppercase;
+    width: 190px;
+    text-align: center;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social {
+    margin-right: 20px;
+
+    &:last-child {
+        margin: 0;
+    }
+}

@@ -1,10 +1,14 @@
 import React from "react"
 import styles from './styles.module.scss'
 
-function Form() {
+function Form({modal}) {
 
     return (
-        <div className={styles.wrapper}></div>
+        <div className={styles.wrapper} onClick={() => modal(false)}>
+            <div className={styles.container} onClick={e => e.stopPropagation()}>
+            
+            </div>
+        </div>
     )
 }
 
