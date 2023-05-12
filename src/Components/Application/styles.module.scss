@@ -1,7 +1,8 @@
 @import "../../main.scss";
 
 .wrapper {
-    height: 100vh;
+    height: fit-content;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,6 +21,7 @@
     color: $grey;
     text-transform: uppercase;
     margin-bottom: 10vh;
+    text-align: center;
 }
 
 .container {
@@ -42,6 +44,7 @@
 .itemName {
     margin-bottom: 30px;
     font-size: $preMiddleFontSize;
+    text-align: center;
 }
 
 .itemBtn {
