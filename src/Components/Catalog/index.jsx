@@ -8,10 +8,10 @@ import catalogItem4 from '../../images/catalogItem4.jpg'
 import catalogItem5 from '../../images/catalogItem5.jpg'
 import catalogItem6 from '../../images/catalogItem6.jpg'
 
-function Catalog({modal}) {
+function Catalog({modal, refLink}) {
 
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} ref={refLink}>
             <h1 className={styles.title}>Каталог растений</h1>
             <div className={styles.catalog}>
                 <img src={catalogPreview} alt="catalogPreview" className={styles.preview}/>

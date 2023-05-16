@@ -9,9 +9,10 @@ import aboutImg5 from '../../images/aboutImg5.jpg'
 import aboutImg6 from '../../images/aboutImg6.jpg'
 import '@splidejs/react-splide/css'
 
-function About() {
+function About({refLink}) {
+
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} ref={refLink}>
             <h1 className={styles.title}>О питомнике</h1>
             <div className={styles.container}>
                 <div className={styles.images}>

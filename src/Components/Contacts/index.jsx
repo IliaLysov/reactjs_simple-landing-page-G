@@ -7,10 +7,10 @@ import Globe from '../../icons/globe.svg'
 import Mail from '../../icons/mail.svg'
 
 
-function Contacts() {
+function Contacts({refLink}) {
 
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} ref={refLink}>
             <h1 className={styles.title}>Контакты</h1>
             <div className={styles.container}>
                 <div className={styles.map}>

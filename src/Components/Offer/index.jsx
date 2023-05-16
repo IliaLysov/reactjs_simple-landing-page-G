@@ -22,8 +22,6 @@ function Offer() {
         });
     };
 
-    console.log(formStatus)
-
     return (
         <div className={styles.wrapper}>
             <h1 className={styles.title}>Купить растения</h1>
