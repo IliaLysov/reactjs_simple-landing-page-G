@@ -5,6 +5,12 @@
     width: 500px;
     border-radius: 20px;
     overflow: hidden;
+    border: 1px solid grey;
+
+    @include tabletBottom {
+        height: 300px;
+        width: 300px;
+    }
 }
 
 .map {

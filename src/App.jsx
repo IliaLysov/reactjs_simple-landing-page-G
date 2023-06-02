@@ -1,10 +1,10 @@
-import React, {useState, useRef, useEffect} from "react"
-import { Header, Cover, Application, About, Catalog, Offer, Contacts, Partners, Form } from "./Components"
+import React, {useState, useRef} from "react"
+import { Header, Cover, Application, About, Catalog, Offer, Contacts, Partners, Modal, Menu, Footer } from "./Components"
 
 
 function App() {
   const [modal, setModal] = useState(false)
-  const [section, setSection] = useState('')
+  const [menu, setMenu] = useState(false)
 
   const aboutSection = useRef()
   const catalogSection = useRef()
@@ -12,32 +12,10 @@ function App() {
   const partnersSection = useRef()
   const coverSection = useRef()
 
-  useEffect(() => {
-    switch (section) {
-      case 'about':
-        aboutSection.current.scrollIntoView({ behavior: 'smooth' })
-        break
-      case 'contacts':
-        contactsSection.current.scrollIntoView({ behavior: 'smooth' })
-        break
-      case 'partners':
-        partnersSection.current.scrollIntoView({ behavior: 'smooth' })
-        break
-      case 'cover':
-        coverSection.current.scrollIntoView({ behavior: 'smooth' })
-        break
-      case 'catalog':
-        catalogSection.current.scrollIntoView({ behavior: 'smooth' })
-        break
-      default:
-        console.log('Секция не определена')
-    } 
-
-  }, [section])
 
   return (
     <div className="App">
-      <Header setSection={setSection}/>
+      <Header refs={{aboutSection, catalogSection, contactsSection, partnersSection, coverSection}} setMenu={setMenu}/>
       <Cover refLink={coverSection}/>
       <Application modal={setModal}/>
       <About refLink={aboutSection}/>
@@ -45,9 +23,9 @@ function App() {
       <Offer />
       <Contacts refLink={contactsSection}/>
       <Partners refLink={partnersSection}/>
-      {modal &&
-      <Form modal={setModal}/>
-      }
+      <Footer />
+      {modal && <Modal modal={setModal}/>}
+      {menu && <Menu setMenu={setMenu} refs={{aboutSection, catalogSection, contactsSection, partnersSection, coverSection}}/>}
     </div>
   );
 }

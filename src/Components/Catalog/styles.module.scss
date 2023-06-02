@@ -22,6 +22,11 @@
     color: $grey;
     text-transform: uppercase;
     margin-bottom: 10vh;
+
+    @include tabletBottom {
+        margin-bottom: 5vh;
+        font-size: $middleFontSize;
+    }
 }
 
 .preview {
@@ -36,10 +41,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    // @include tabletBottom {
+    //     flex-direction: row;
+    // }
 }
 
 .itemsSide {
     display: flex;
+
+    @include tabletBottom {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
 }
 
 .item {
@@ -51,18 +65,72 @@
     &:last-child {
         margin: 0;
     }
+
+    @include tabletBottom {
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
 }
 
 .itemImg {
     margin-bottom: 14px;
     filter: brightness(85%);
+
+    transition: height .3s;
+
+    @include tabletBottom {
+        height: 0;
+
+        &.active {
+            height: 237px;
+        }
+    }
+}
+
+.itemBlock {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+
+.arrow {
+    width: 10px;
+    transform: rotate(-90deg);
+    transition: transform .3s;
+
+    @include tabletBottom {
+        &.active {
+            transform: rotate(90deg);
+        }
+    }
 }
 
 .itemName {
     font-size: $preMiddleFontSize;
     font-weight: 500;
-    margin-bottom: 10px;
     text-align: center;
+    
+    @include tabletBottom {
+        user-select: none;
+        margin-right: 10px;
+    }
+}
+
+.btnWrapper {
+
+    transition: height .3s;
+    @include tabletBottom {
+        overflow: hidden;
+        height: 0;
+        display: flex;
+        justify-content: center;
+
+        &.active {
+            height: 40px;
+        }
+    }
 }
 
 .itemBtn {
@@ -71,4 +139,10 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 88px;
     cursor: pointer;
+    box-sizing: border-box;
+
+    @include tabletBottom {
+        filter: none;
+        border: 1px solid $grey;
+    }
 }

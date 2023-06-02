@@ -21,11 +21,20 @@
     color: $grey;
     text-transform: uppercase;
     margin-bottom: 10vh;
+
+    @include tabletBottom {
+        margin-bottom: 5vh;
+        font-size: $middleFontSize;
+    }
 }
 
 .container {
     display: flex;
     align-items: center;
+
+    @include tabletBottom {
+        flex-direction: column;
+    }
 }
 
 .orderBtn {
@@ -38,6 +47,12 @@
     cursor: pointer;
     margin-right: 60px;
     text-align: center;
+    user-select: none;
+
+    @include tabletBottom {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
 }
 
 .form {

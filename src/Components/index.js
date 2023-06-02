@@ -9,5 +9,7 @@ import YandexMap from "./YandexMap"
 import Partners from "./Partners"
 import Footer from "./Footer"
 import Form from "./Form"
+import Modal from "./Modal"
+import Menu from "./Menu"
 
-export {Header, Cover, Application, About, Catalog, Offer, Contacts, YandexMap, Partners, Footer, Form}
+export {Header, Cover, Application, About, Catalog, Offer, Contacts, YandexMap, Partners, Footer, Form, Modal, Menu}

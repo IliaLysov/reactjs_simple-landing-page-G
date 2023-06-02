@@ -15,6 +15,8 @@
     @include tabletTop {
         padding: $headerHeight $phoneScreenIndentation;
     }
+
+    
 }
 
 .title {
@@ -24,6 +26,11 @@
     color: $grey;
     text-transform: uppercase;
     margin-bottom: 10vh;
+
+    @include tabletBottom {
+        margin-bottom: 5vh;
+        font-size: $middleFontSize;
+    }
 }
 
 .container {
@@ -31,4 +38,17 @@
     width: 100%;
     justify-content: space-between;
     padding: 0  10vw;
+
+    @include tabletBottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.img {
+
+    @include tabletBottom {
+        height: 150px;
+        margin-bottom: 40px;
+    }
 }

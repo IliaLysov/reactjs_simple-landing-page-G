@@ -1,18 +1,137 @@
 @import "../../main.scss";
 
 .wrapper {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.2);
-    height: 100vh;
-    width: 100vw;
-    z-index: 100;
-    top: 0;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.container {
-    background-color: white;
-    padding: 20px;
+// .form {
+    
+// }
+
+.formTitle {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: $middleFontSize;
+    color: $grey;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.horizon {
+    display: flex;
+
+    @include tabletBottom {
+        flex-direction: column;
+    }
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.side {
+    margin-right: 20px;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include tabletBottom {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &.modal {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    & label {
+        margin-bottom: 4px;
+        font-weight: 500;
+        color: $grey;
+    }
+
+    & input {
+        padding: 6px 10px;
+        border-radius: 6px;
+        outline: none;
+        border: 1px solid gray;
+    }
+
+    & textarea {
+        resize: none;
+        padding: 6px 10px;
+        border-radius: 6px;
+        outline: none;
+        border: 1px solid gray;
+    }
+}
+
+.submitBtn {
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    color: $grey;
+    background-color: rgb(212, 211, 211);
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.alignment {
+    display: flex;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.loading {
+    font-weight: 600;
+    font-size: $middleFontSize;
+    color: $grey;
+    width: 200px;
+    text-align: center;
+}
+
+.result {
+    font-weight: 600;
+    font-size: $middleFontSize;
+    color: #448c00;
+    width: 200px;
+    text-align: center;
 }

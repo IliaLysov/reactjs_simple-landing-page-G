@@ -22,9 +22,14 @@
     margin: 0 8vw;
     font-family: 'Hind Guntur', sans-serif;
     font-size: $middleFontSize;
+    padding-top: 8px;
     cursor: pointer;
     @include tabletTop {
         margin: 0 6vw;
+    }
+
+    @include tabletBottom {
+        margin: 0;
     }
 }
 
@@ -32,6 +37,10 @@
     display: flex;
     justify-content: space-between;
     flex: 1;
+
+    @include tabletBottom {
+        display: none;
+    }
 }
 
 .nav {
@@ -41,4 +50,14 @@
 a {
     color: inherit;
     text-decoration: inherit;
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+    padding: 10px 0;
+
+    @include tabletBottom {
+        display: block;
+    }
 }
